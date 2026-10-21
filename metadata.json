@@ -1,0 +1,8 @@
+{
+  "name": "Fernway Cleaning Co.",
+  "description": "Boutique residential and office cleaning in Austin, TX. A cleaner space, a lighter week.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

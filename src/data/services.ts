@@ -1,0 +1,156 @@
+export interface ServiceItem {
+  id: string;
+  slug: string;
+  title: string;
+  category: 'residential' | 'commercial' | 'specialty';
+  shortDesc: string;
+  fullDesc: string;
+  startingPrice: string;
+  priceNote: string;
+  durationEst: string;
+  image: string;
+  included: string[];
+  idealFor: string;
+  featured?: boolean;
+}
+
+export const servicesData: ServiceItem[] = [
+  {
+    id: 'standard-home',
+    slug: 'standard-home-clean',
+    title: 'Standard Home Clean',
+    category: 'residential',
+    shortDesc: 'Thoughtful routine maintenance for living rooms, kitchens, bedrooms, and baths.',
+    fullDesc: 'Our cornerstone maintenance service keeps your home in steady, serene order. We wipe all reachable surfaces, vacuum with HEPA filtration, mop hard floors, detail bath fixtures, make beds with crisp linen hospital corners, and empty all waste bins.',
+    startingPrice: '$165',
+    priceNote: 'Starting rate for 1-2 bed homes on recurring schedule',
+    durationEst: '2 - 3.5 hours',
+    image: '/src/assets/images/hero_bright_living_room_1792614127186.jpg',
+    included: [
+      'Dusting all open surfaces, shelves, frames, and decor',
+      'Vacuuming all carpets, rugs, stairs, and upholstery crevices',
+      'Warm damp mopping for hardwoods, stone, and tile',
+      'Scrubbing and disinfecting sinks, toilets, tubs, and glass showers',
+      'Exterior sanitization of all kitchen appliances and cabinetry',
+      'Kitchen sink scrub with brass/stainless polish',
+      'Trash emptied and relined with fresh biodegradable bags',
+      'Beds made with hotel-tucked corners',
+    ],
+    idealFor: 'Busy professionals and households wanting reliable weekly or bi-weekly resets.',
+    featured: true,
+  },
+  {
+    id: 'deep-clean',
+    slug: 'deep-clean',
+    title: 'Signature Deep Clean',
+    category: 'residential',
+    shortDesc: 'A top-to-bottom restorative scrub targeting accumulated dust, baseboards, and grime.',
+    fullDesc: 'A meticulous restorative session for homes needing a fresh baseline. We hand-wipe baseboards, door frames, light switches, cabinet fronts, scrub tile grout lines, detail window sills, and eliminate lingering pet dander and allergen buildup.',
+    startingPrice: '$285',
+    priceNote: 'Comprehensive reset based on square footage',
+    durationEst: '4 - 6 hours',
+    image: '/src/assets/images/service_kitchen_clean_1792614146081.jpg',
+    included: [
+      'Everything in Standard Clean, plus:',
+      'Hand-washing all baseboards, door frames, and crown moldings',
+      'Interior oven degreasing and deep stovetop detail',
+      'Full exterior and interior detail of kitchen cabinetry',
+      'Grout line agitation and hard water stain removal in bathrooms',
+      'Inside all window sills, blinds hand-dusted, and track wipe-down',
+      'Light fixtures, ceiling fans, and vent covers washed',
+      'Under-furniture and behind-appliance vacuuming where reachable',
+    ],
+    idealFor: 'First-time Fernway clients, seasonal spring resets, or homes uncleaned for 60+ days.',
+    featured: true,
+  },
+  {
+    id: 'move-in-out',
+    slug: 'move-in-move-out',
+    title: 'Move-In / Move-Out Clean',
+    category: 'residential',
+    shortDesc: 'Empty-space detailing designed for seamless lease deposits and fresh starts.',
+    fullDesc: 'Moving is exhausting enough—leave the cleaning to us. We clean empty homes from corner to corner so you secure your security deposit or hand over keys to incoming buyers with total pride and confidence.',
+    startingPrice: '$320',
+    priceNote: 'Includes full inside appliance and pantry detail',
+    durationEst: '5 - 7 hours',
+    image: '/src/assets/images/service_move_clean_1792614146279.jpg',
+    included: [
+      'Complete interior and exterior deep clean of all empty cabinets & drawers',
+      'Full refrigerator, freezer, oven, and dishwasher interior sanitation',
+      'Baseboards, door casings, window sills, and trim washed by hand',
+      'Closet shelving, rods, and base tracks vacuumed and wiped',
+      'Deep wall spot cleaning for scuffs and high-touch marks',
+      'Garage or patio sweeping on request',
+      'Landlord and property manager checkout guarantee',
+    ],
+    idealFor: 'Renters moving out, homeowners prepping for sale, or buyers before moving furniture in.',
+    featured: true,
+  },
+  {
+    id: 'office-commercial',
+    slug: 'office-and-commercial',
+    title: 'Office & Commercial Care',
+    category: 'commercial',
+    shortDesc: 'Quiet, after-hours commercial sanitation for design studios, tech suites, and clinics.',
+    fullDesc: 'Austin offices deserve the same warm, elevated care as modern residences. We maintain collaborative workspaces, private offices, conference rooms, kitchenettes, and restrooms with medical-grade botanicals that leave no harsh chemical stench for morning arrivals.',
+    startingPrice: '$240 / visit',
+    priceNote: 'Tailored by square footage & frequency (1x to 5x weekly)',
+    durationEst: 'Custom scheduled',
+    image: '/src/assets/images/office_modern_clean_1792614129535.jpg',
+    included: [
+      'Workstation dusting and high-touch disinfection (keyboards, phones, door handles)',
+      'Conference room reset, glass marker boards cleaned, tables sanitized',
+      'Full kitchenette care: dishwasher load/unload, coffee station sanitized, fridge purge',
+      'Restroom deep hygiene, fixtures polished, consumables restocked',
+      'HEPA commercial carpet vacuuming and hard floor buffing/mopping',
+      'Waste and recycling sorting & discreet consolidation',
+      'Consistent dedicated crew with secure keycard / alarm protocol',
+    ],
+    idealFor: 'Boutique agencies, law practices, tech startups, architects, and wellness clinics.',
+    featured: true,
+  },
+  {
+    id: 'recurring-plans',
+    slug: 'recurring-plans',
+    title: 'Recurring Wellness Plans',
+    category: 'residential',
+    shortDesc: 'Weekly, bi-weekly, or monthly visits with priority booking and dedicated team members.',
+    fullDesc: 'The ultimate luxury is never having to worry about cleaning again. Recurring clients enjoy our highest tier of service: locked-in discounted rates, the same trusted cleaners each visit, priority rescheduling, and free seasonal add-ons.',
+    startingPrice: '$145 / visit',
+    priceNote: 'Save up to 20% on bi-weekly and weekly schedules',
+    durationEst: '2 - 3 hours',
+    image: '/src/assets/images/cleaner_friendly_crew_1792614129751.jpg',
+    included: [
+      'Locked calendar slot with your preferred day and time',
+      'Consistent 2-person crew who know your exact home preferences',
+      'Up to 20% discount compared to one-time cleans',
+      'Rotating deep clean add-on included every 4th visit',
+      'No lock-in contracts: pause or skip anytime with 24h notice',
+      'Direct SMS concierge line to our operations manager',
+    ],
+    idealFor: 'Families, pet parents, and busy professionals seeking effortless consistency.',
+    featured: true,
+  },
+  {
+    id: 'post-construction',
+    slug: 'post-construction',
+    title: 'Post-Construction Detail',
+    category: 'specialty',
+    shortDesc: 'Fine drywall dust extraction and paint overspray removal after remodels.',
+    fullDesc: 'Remodels leave microscopic gypsum dust and adhesive residues that standard vacuums only recirculate. Our post-construction technicians utilize multi-stage HEPA filtration, specialized microfibers, and non-abrasive polishes to unveil your new space.',
+    startingPrice: '$395',
+    priceNote: 'Custom quote based on scope and square footage',
+    durationEst: '6 - 9 hours',
+    image: '/src/assets/images/room_clean_after_1792614128880.jpg',
+    included: [
+      'Multi-pass HEPA air filtration vacuuming for fine drywall dust',
+      'Adhesive, sticker, and paint splatter removal from glass and tile',
+      'Light fixture, chandelier, and vent cover disassembly and washing',
+      'Inside all drawers, cabinet hinges, and closets wiped clean',
+      'Window tracking and glass detail with streak-free finish',
+      'Floor buffing and post-build polish ready for move-in',
+    ],
+    idealFor: 'Homeowners finishing renovations, interior designers, and general contractors.',
+    featured: false,
+  },
+];
